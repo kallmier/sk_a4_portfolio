@@ -1,15 +1,15 @@
-/* Portfolio Website Stylesheet | Author: SK | Date: April 2026 */
+/* Portfolio Website Stylesheet | Author: SK | Date: May/June 2026 */
 
 /* ==================== COLOUR VARIABLES ==================== */
 /* Change these values to update colours across the whole site */
 :root {
-    --colour-primary: #3f1955;    /* dark purple - buttons, borders */
-    --colour-dark: #4a2560;       /* darker purple - nav background */
-    --colour-header: #4a2560;     /* header background */
-    --colour-border: #d4a8e0;     /* light pink border */
-    --colour-body: #3b1d50;       /* page background */
-    --colour-text: #ffffff;       /* white text */
-    --colour-accent: #d4a8e0;     /* light pink - headings and hover */
+    --colour-primary: #311044;    /* deep purple - nav buttons, form background, input background */
+    --colour-dark: #36104d;       /* mid purple - nav button hover background */
+    --colour-header: #490c6c;     /* bright purple - header and textarea background */
+    --colour-border: #d4a8e0;     /* light lilac - all borders (header, inputs, form, fieldset) */
+    --colour-body: #490c6c;       /* bright purple - page background (matches header) */
+    --colour-text: #e8b2f7;       /* light lavender - body text (paragraphs and lists) */
+    --colour-accent: #d48de8;     /* light lilac - headings, nav hover text, links */
 }
 
 /* ==================== GLOBAL STYLES ==================== */
@@ -65,7 +65,7 @@ nav a {
     background-color: var(--colour-primary);
     color: #ffffff;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 10px 10px;
     margin: 0 5px;
     border-radius: 5px;
     font-weight: bold;
@@ -121,10 +121,12 @@ ol {
 ul, ol {
     color: var(--colour-text);
     font-size: 1.1em;
+    padding: 10px;
 }
 
 li {
     margin-bottom: 10px;
+    line-height: 1.5;
 }
 
 .lists-container {
@@ -139,27 +141,99 @@ li {
 
 /* ==================== TABLE ==================== */
 table {
-  font-family: Georgia, Arial, Helvetica, sans-serif;
-  color: #ffffff;
-  border-collapse: collapse;
-  width: 100%;
+    font-family: Georgia, Arial, Helvetica, sans-serif;
+    color: var(--colour-text);
+    border-collapse: collapse;
+    width: 100%;
 }
 
 th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #d4a8e0;
-  color: rgb(6, 0, 8);
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: var(--colour-accent);
+    color: var(--colour-primary);
 }
 
 tr:nth-child(even) {
-    background-color: #3b1d50;
+    background-color: var(--colour-primary);
 }
 
 td, th {
-  border: 1px solid #ce85e3;
-  padding: 8px;
+    border: 1px solid var(--colour-border);
+    padding: 8px;
+}
+
+/* ==================== FORM ==================== */
+input[type="text"],
+input[type="email"] {
+    background-color: var(--colour-primary);
+    color: var(--colour-text);
+    padding: 10px;
+    border: 1px solid var(--colour-border);
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+form {
+    border: 1px solid var(--colour-border);
+    border-radius: 5px;
+    padding: 30px;
+    background-color: var(--colour-primary);
+    font-family: Georgia, Arial, Helvetica, sans-serif;
+}
+
+form label {
+    color: var(--colour-text);
+}
+
+form p {
+    margin-bottom: 5px;
+}
+
+textarea {
+    background-color: var(--colour-primary);
+    color: var(--colour-text);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+}
+
+button {
+    display: inline-block;
+    background-color: var(--colour-primary);
+    color: var(--colour-accent);
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 2px solid var(--colour-border);
+}
+
+button:hover {
+    background-color: var(--colour-dark);
+    color: var(--colour-accent);
+    border: 2px solid var(--colour-accent);
+}
+
+fieldset {
+    border: 1px solid var(--colour-border);
+    border-radius: 5px;
+    padding: 15px;
+    margin: 15px 0;
+    accent-color: var(--colour-accent);
+}
+
+fieldset label {
+    color: var(--colour-text);
+}
+
+legend {
+    color: var(--colour-text);
+    padding: 0 5px;
 }
 
 /* ==================== IMAGES ==================== */
@@ -193,6 +267,23 @@ td, th {
 .align-center { text-align: center; }
 .align-right { text-align: right; }
 .highlight { font-weight: bold; }
+
+/* ==================== RESPONSIVE STYLES ==================== */
+@media screen and (max-width: 1024px) {
+    nav a {
+        padding: 8px 12px;
+        font-size: 0.9em;
+        margin: 2px 4px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav a {
+        padding: 6px 10px;
+        font-size: 0.85em;
+        margin: 2px 3px;
+    }
+}
 
 /* ==================== PRINT STYLES ==================== */
 @media print {
