@@ -291,6 +291,11 @@ legend {
         display: none;
     }
 
+    tr, .list-column {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
     body {
         background-color: white;
         color: black;
